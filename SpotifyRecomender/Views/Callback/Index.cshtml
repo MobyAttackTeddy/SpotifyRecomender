@@ -1,0 +1,45 @@
+﻿@model  SpotifyRecomender.Models.AuthenticationResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Script/Script.js"></script>
+    <script src="~/Scripts/jquery-1.8.0.min.js"></script>
+    <script>
+        var urlString;
+        var access_token;
+
+        function getURIvalues() {
+            urlString = window.location.hash.substr(1);
+            access_token = text_truncate(urlString, 147);
+
+
+
+            $.ajax({
+                url: '/callback/Store/',
+                data: { access_token: access_token.replace("access_token=", "") },
+                type: "POST",
+                dataType: "text",
+                success: function () {
+                    window.location.href = "/Home/App"
+                }
+            });
+
+        }
+
+
+        window.onload = getURIvalues();
+
+    </script>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

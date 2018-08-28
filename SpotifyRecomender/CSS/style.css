@@ -1,0 +1,66 @@
+﻿#Login {
+    margin: auto;
+    align-content: center;
+    width: 500px;
+    background-color: #0026ff;
+    text-align: center;
+}
+
+.centerDiv {
+    margin: auto;
+    align-content: center;
+    width: 700px;
+    background-color: #cccccc;
+    text-align: center;
+}
+
+div.centerDiv {
+    color:black;
+}
+
+h2 {
+    color:aliceblue;
+}
+
+.whitetext {
+    color:azure;
+    font-family:Arial;
+}
+
+div {
+    color: aliceblue;
+    font-family:Arial;
+}
+
+.lable {
+    font-size: 28px;
+}
+
+
+.text-box {
+    margin:3px;
+    border-color: #cccccc;
+    border-width: 0px;
+    border-radius: 12px;
+    padding: 9px;
+    font-size: 28px;
+    border-style: hidden;
+    text-align: center;
+}
+
+.text-box:focus {
+    outline: none;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

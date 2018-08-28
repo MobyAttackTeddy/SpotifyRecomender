@@ -1,0 +1,46 @@
+﻿@model SpotifyRecomender.Models.SearchModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>App</title>
+    <link href="~/CSS/style.css" rel="stylesheet" />
+    <script src="~/Script/Script.js"></script>
+</head>
+<body>
+
+    <template>
+        <div class="centerDiv">
+            <div style="float: left;">
+                <img src="$imgSrc" width="100" height="100" />
+            </div><div style="float:right;">Recomendations</div>
+            <div>
+                <h3>$Title</h3><br />
+                $Band<br />
+                $Album
+            </div>
+            
+        </div>
+        
+    </template>
+    <div class="centerDiv">
+        Search with freetext, choose a song from the result. To find more simelar song as the one you liked.<br /><br />
+        Choose a song/artist/gener from the freetext search result. Adjust the filter channel's to find a more, precis result.
+        @{ using (Html.BeginForm("", "")) { }
+            @Html.Label("Free text: ", new { @class = "lable" })
+            @Html.EditorFor(m => m.searchStr)
+        }
+        <!-- Ugly button to test template-->    
+        <br />
+        <button onclick="populateOneTemplate()">Show content</button>
+        <div id="templateArea">
+
+        </div>
+    </div>
+</body>
+</html>
